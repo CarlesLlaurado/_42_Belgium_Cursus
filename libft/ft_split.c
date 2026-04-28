@@ -17,6 +17,8 @@ static int	ft_count_words(char const *s, char c)
 	int	count;
 	int	in_word;
 
+	if (!s)
+		return (0);
 	count = 0;
 	in_word = 0;
 	while (*s)
@@ -38,6 +40,8 @@ static char	*ft_get_word(char const *s, char c, int *i)
 	int		start;
 	int		len;
 
+	if (!s)
+		return (NULL);
 	while (s[*i] == c)
 		(*i)++;
 	start = *i;
