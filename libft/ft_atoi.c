@@ -36,3 +36,26 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+/*
+
+#include <stdio.h>
+int	main(void)
+{
+	char str[] = "    	\t\n-20000000000";
+	printf("%d\n", ft_atoi(str));
+	printf("%d\n", atoi(str));
+	char str2[] = "    	+555";
+	printf("%d\n", ft_atoi(str2));
+	printf("%d\n", atoi(str2));
+	char str3[] = "7-123";
+	printf("%d\n", ft_atoi(str3));
+	printf("%d\n", atoi(str3));
+	char str4[] = "\t\n-0";
+	printf("%d\n", ft_atoi(str4));
+	printf("%d\n", atoi(str4));
+
+
+	return (0);
+}
+*/

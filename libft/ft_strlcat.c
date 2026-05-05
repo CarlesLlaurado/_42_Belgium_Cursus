@@ -31,3 +31,28 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dstlen + i] = '\0';
 	return (dstlen + srclen);
 }
+
+/*
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char	dst[20] = "hola ";
+
+	printf("ret: %zu\n", ft_strlcat(dst, "mundo", 20));
+	printf("dst: %s\n\n", dst);
+
+	return (0);
+}
+*/

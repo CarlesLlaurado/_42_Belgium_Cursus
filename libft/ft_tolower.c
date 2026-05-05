@@ -18,3 +18,18 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    printf("--- TEST ft_tolower ---\n");
+    printf("Mayúscula (A) -> %c\n", ft_tolower('A'));
+    printf("Mayúscula (Z) -> %c\n", ft_tolower('Z'));
+    printf("Minúscula (m) -> %c\n", ft_tolower('m'));
+    printf("Símbolo   (5) -> %c\n", ft_tolower('5'));
+    
+    return (0);
+}
+*/

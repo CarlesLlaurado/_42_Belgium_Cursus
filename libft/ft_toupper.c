@@ -18,3 +18,18 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    printf("--- TEST ft_toupper ---\n");
+    printf("Minúscula (a) -> %c\n", ft_toupper('a'));
+    printf("Minúscula (z) -> %c\n", ft_toupper('z'));
+    printf("Mayúscula (M) -> %c\n", ft_toupper('M'));
+    printf("Símbolo   (5) -> %c\n", ft_toupper('5'));
+    
+    return (0);
+}
+*/

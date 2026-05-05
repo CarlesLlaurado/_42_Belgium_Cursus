@@ -23,3 +23,18 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+/*
+#include<stdio.h>
+int main(void)
+{
+	char s[10] = "CarlesLLL";
+	ft_bzero(s, 3);
+	int i = 0;
+	while (i < 10)
+	{
+		printf("%d ", (unsigned char)s[i]);
+		i++;
+	}
+}
+*/

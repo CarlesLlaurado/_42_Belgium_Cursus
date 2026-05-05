@@ -30,3 +30,20 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    char src[] = "Exito";
+    char dst[10]; // Buffer con espacio de sobra
+
+    ft_memcpy(dst, src, 6);
+    
+    printf("Resultado esperado: Exito\n");
+    printf("Tu resultado:       %s\n", dst);
+    
+    return (0);
+}
+*/

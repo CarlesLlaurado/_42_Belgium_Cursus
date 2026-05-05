@@ -26,3 +26,17 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+    char str[50] = "My name is Carles Llauradó";
+    printf("\nBefore memset(): %s\n", str);
+
+    ft_memset(str, '.', 8*sizeof(char));
+
+    printf("After memset():  %s", str);
+    return 0;
+}
+*/
