@@ -81,8 +81,6 @@ Other Makefile rules:
 - [42 Norm](https://github.com/42School/norminette) — norminette rules
 
 ### AI Usage Disclosure
-Este proyecto ha sido desarrollado siguiendo las directrices de 42 sobre el uso de herramientas de IA. Se ha utilizado asistencia de Inteligencia Artificial específicamente para:
-
-- **Generación de Tests:** Creación de suites de pruebas unitarias para validar casos límite (edge cases) como desbordamientos de memoria, `INT_MIN` en conversiones y gestión de punteros `NULL`.
-- **Documentación:** Apoyo en la estructuración y redacción del archivo `README.md` para asegurar que cumple con todos los requisitos informativos del manual del proyecto[cite: 1].
-- **Arquitectura del Makefile:** Optimización de las reglas de compilación para garantizar el cumplimiento del protocolo de bonus y evitar el relinking[cite: 1].
+This project follows 42's AI guidelines[cite: 1]. AI was used for:
+* **Test Generation**: Creating unit tests for edge cases (e.g., INT_MIN, memory overflows, and NULL pointers)[cite: 1].
+* **Documentation**: Structuring and drafting the README.md to meet all manual requirements[cite: 1].
