@@ -6,15 +6,17 @@
 /*   By: Carles Llauradó <cllaurad@student.42belg  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 21:20:48 by Carles Llaura     #+#    #+#             */
-/*   Updated: 2026/05/06 21:58:01 by Carles Llaura    ###   ########.fr       */
+/*   Updated: 2026/05/07 10:25:58 by Carles Llaura    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(cont char *str, ...)
+static int	ft_handle_conversion(char c, va_list *args);
+
+int	ft_printf(const char *str, ...)
 {
-	va_list args;
+	va_list	args;
 	int		count;
 	int		i;
 
@@ -44,9 +46,9 @@ static	int	ft_handle_conversion(char c, va_list *args)
 	if (c == 'c')
 		return (ft_print_char(va_arg(*args, int)));
 	else if (c == 's')
-		return (ft_print_str(va_arg(*args, char*)));
+		return (ft_print_str(va_arg(*args, char *)));
 	else if (c == 'p')
-		return (ft_print_ptr(va_arg(*args, void*)));
+		return (ft_print_ptr(va_arg(*args, void *)));
 	else if (c == 'd' || c == 'i')
 		return (ft_print_int(va_arg(*args, int)));
 	else if (c == 'u')
