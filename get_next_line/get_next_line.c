@@ -33,7 +33,6 @@ char *get_next_line(int fd)
         salto[1] = '\0';
         return (line);
     }
-    
 
     while (1)
     {
