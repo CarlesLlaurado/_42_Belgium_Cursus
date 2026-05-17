@@ -13,13 +13,12 @@
 #include "get_next_line.h"
 
 static int	ft_take_line_update_buffer(char **line, char buffer[]);
+static char *ft_read_while_buffer(int fd,char *buffer, char **line);
 
 char	*get_next_line(int fd)
 {
 	static char	buffer[BUFFER_SIZE + 1];
-	ssize_t		bytes_read;
 	char		*line;
-	char		*temp;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -28,24 +27,33 @@ char	*get_next_line(int fd)
 		return (NULL);
 	if (ft_take_line_update_buffer(&line, buffer))
 		return (line);
-	bytes_read = reaad(fd, buffer, BUFFER_SIZE);
+	
+	return (ft_read_while_buffer(fd, buffer, &line));
+}
+
+static char *ft_read_while_buffer(int fd,char *buffer, char **line)
+{
+	ssize_t		bytes_read;
+	char		*temp;
+
+	bytes_read = read(fd, buffer, BUFFER_SIZE);
 	while (bytes_read > 0)
 	{
 		buffer[bytes_read] = '\0';
-		temp = ft_strjoin(line, buffer);
-		free(line);
-		line = temp;
-		if (ft_take_line_update_buffer(&line, buffer))
-			break ;
+		temp = ft_strjoin(*line, buffer);
+		free(*line);
+		*line = temp;
+		if (ft_take_line_update_buffer(line, buffer))
+			return (*line);
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 	}
 	buffer[0] = '\0';
-	if (!line[0])
+	if (!(*line)[0])
 	{
-		free(line);
+		free(*line);
 		return (NULL);
 	}
-	return (line);
+	return (*line);
 }
 
 static int	ft_take_line_update_buffer(char **line, char buffer[])
